@@ -1,4 +1,12 @@
 {
+  "name": "interactive-wcag",
+  "version": "0.0.1",
+  "description": "A filterable and shareable version of the WCAG 2.0 spec.",
+  "author": "Jeremy Fields <jeremy.fields@viget.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vigetlabs/interactive-wcag"
+  },
   "devDependencies": {
     "assemble": "~0.4.9",
     "grunt": "~0.4.5",
