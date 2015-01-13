@@ -1,0 +1,223 @@
+// utilities
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+// mixins
+@mixin disabled {
+  background-color: #eee;
+  color: #444;
+}
+
+.container {
+  padding-bottom: 5em;
+
+  h2 {
+    margin-top: 2em;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 15px;
+}
+
+.table {
+  th,
+  td {
+    padding: 20px !important;
+  }
+
+  th {
+    width: 20%;
+  }
+
+  td {
+    width: 80%;
+  }
+}
+
+.label {
+  transition: all 200ms 50ms;
+}
+
+.label-fed {
+  background-color: #428bca;
+}
+
+.label-design {
+  background-color: #5cb85c;
+}
+
+.label-ux {
+  background-color: #f0ad4e;
+}
+
+.label-dev {
+  background-color: #d9534f;
+}
+
+.label-content {
+  background-color: #777;
+}
+
+// filters
+.filters {
+  @extend .clearfix;
+}
+
+// filter by lab
+.filters-lab {
+  float: right;
+
+  label {
+    display: inline-block;
+    margin: 0 0 0 15px;
+  }
+}
+
+[data-lab="content"] {
+  .label-design,
+  .label-dev,
+  .label-fed,
+  .label-ux {
+    @include disabled;
+  }
+
+  .design,
+  .dev,
+  .fed,
+  .ux {
+    display: none;
+  }
+
+  .content {
+    display: block;
+  }
+}
+
+[data-lab="design"] {
+  .label-content,
+  .label-dev,
+  .label-fed,
+  .label-ux {
+    @include disabled;
+  }
+
+  .content,
+  .dev,
+  .fed,
+  .ux {
+    display: none;
+  }
+
+  .design {
+    display: block;
+  }
+}
+
+[data-lab="dev"] {
+  .label-content,
+  .label-design,
+  .label-fed,
+  .label-ux {
+    @include disabled;
+  }
+
+  .content,
+  .design,
+  .fed,
+  .ux {
+    display: none;
+  }
+
+  .dev {
+    display: block;
+  }
+}
+
+[data-lab="fed"] {
+  .label-content,
+  .label-design,
+  .label-dev,
+  .label-ux {
+    @include disabled;
+  }
+
+  .content,
+  .design,
+  .dev,
+  .ux {
+    display: none;
+  }
+
+  .fed {
+    display: block;
+  }
+}
+
+[data-lab="ux"] {
+  .label-content,
+  .label-design,
+  .label-dev,
+  .label-fed {
+    @include disabled;
+  }
+
+  .content,
+  .design,
+  .dev,
+  .fed {
+    display: none;
+  }
+
+  .ux {
+    display: block;
+  }
+}
+
+// filter by level
+.filters-level {
+  float: left;
+
+  label {
+    display: inline-block;
+    margin: 0 15px 0 0;
+  }
+}
+
+.js {
+  body {
+    .a,
+    .aa,
+    .aaa {
+      display: none;
+    }
+  }
+
+  [data-level="a"] {
+    .a {
+      display: table-header-group;
+    }
+  }
+
+  [data-level="aa"] {
+    .a,
+    .aa {
+      display: table-header-group;
+    }
+  }
+
+  [data-level="aaa"] {
+    .a,
+    .aa,
+    .aaa {
+      display: table-header-group;
+    }
+  }
+}

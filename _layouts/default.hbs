@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" sizes="16x16 32x32" href="http://viget.com/favicon.ico">
+    <!--[if IE]><link rel="shortcut icon" href="http://viget.com/favicon.ico"><![endif]-->
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{assets}}/stylesheets/index.css?__inline=true">
+
+    <script src="{{assets}}/javascripts/vendor/js-class.js?__inline=true"></script>
+
+  </head>
+  <body>
+
+    <div class="container">
+
+      <header class="page-header">
+        <h1>Viget + Accessibility <abbr title="Web Content Accessibility Guidelines">WCAG</abbr></h1>
+      </header>
+
+      {{> filters }}
+      {{> body }}
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{assets}}/javascripts/vendor/urihash.js?__inline=true"></script>
+    <script src="{{assets}}/javascripts/index.js?__inline=true"></script>
+
+  </body>
+</html>
