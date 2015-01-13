@@ -21,12 +21,13 @@ module.exports = {
     'assemble:dev'
   ],
 
-  // development
+  // production
   'deploy': [
     'clean:before',
     'styles',
     'scripts',
     'markup',
-    'inline'
+    'inline',
+    'clean:production'
   ]
 };
