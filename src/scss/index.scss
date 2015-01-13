@@ -72,7 +72,7 @@
 }
 
 // filter by lab
-.filters-lab {
+.filters-responsibility {
   float: right;
 
   label {
@@ -81,7 +81,7 @@
   }
 }
 
-[data-lab="content"] {
+[data-responsibility="content"] {
   .label-design,
   .label-dev,
   .label-fed,
@@ -101,7 +101,7 @@
   }
 }
 
-[data-lab="design"] {
+[data-responsibility="design"] {
   .label-content,
   .label-dev,
   .label-fed,
@@ -121,7 +121,7 @@
   }
 }
 
-[data-lab="dev"] {
+[data-responsibility="dev"] {
   .label-content,
   .label-design,
   .label-fed,
@@ -141,7 +141,7 @@
   }
 }
 
-[data-lab="fed"] {
+[data-responsibility="fed"] {
   .label-content,
   .label-design,
   .label-dev,
@@ -161,7 +161,7 @@
   }
 }
 
-[data-lab="ux"] {
+[data-responsibility="ux"] {
   .label-content,
   .label-design,
   .label-dev,

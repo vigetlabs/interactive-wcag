@@ -3,29 +3,29 @@
   'use strict';
 
   // vars
-  var labs = document.querySelector('.filters-lab');
-  var labFilters = labs.querySelectorAll('.filters-lab input');
+  var responsibilities = document.querySelector('.filters-responsibility');
+  var responsibilityFilters = responsibilities.getElementsByTagName('input');
   var levelFilter = document.querySelector('.filters-level select');
 
   // events
   var events = function() {
-    for (var i = 0, len = labFilters.length; i < len; i++) {
-      labFilters[i].addEventListener('change', filterByLab);
+    for (var i = 0, len = responsibilityFilters.length; i < len; i++) {
+      responsibilityFilters[i].addEventListener('change', filterByResponsibility);
     }
 
     levelFilter.addEventListener('change', filterByLevel);
   };
 
   // functions
-  var filterByLab = function() {
+  var filterByResponsibility = function() {
     var checked;
 
-    for (var i = 0, len = labFilters.length; i < len; i++) {
-      if (labFilters[i].checked) checked = labFilters[i].value;
+    for (var i = 0, len = responsibilityFilters.length; i < len; i++) {
+      if (responsibilityFilters[i].checked) checked = responsibilityFilters[i].value;
     }
 
-    document.body.setAttribute('data-lab', checked);
-    URIHash.set('lab', checked);
+    document.body.setAttribute('data-responsibility', checked);
+    URIHash.set('responsibility', checked);
   };
 
   var filterByLevel = function() {
@@ -43,18 +43,18 @@
       document.body.setAttribute('data-level', levelHash);
     }
 
-    // lab
-    var labHash = URIHash.get('lab');
-    if (labHash) {
-      var check = labs.querySelector('input[value=' + labHash + ']');
+    // responsibility
+    var responsibilityHash = URIHash.get('responsibility');
+    if (responsibilityHash) {
+      var check = responsibilities.querySelector('input[value=' + responsibilityHash + ']');
       check.checked = true;
 
-      document.body.setAttribute('data-lab', labHash);
+      document.body.setAttribute('data-responsibility', responsibilityHash);
     }
   };
 
   handleHash();
-  filterByLab();
+  filterByResponsibility();
   filterByLevel();
   events();
 
