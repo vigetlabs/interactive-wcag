@@ -7,6 +7,7 @@ A filterable and shareable version of the WCAG 2.0 spec.
 1. [Requirements](#requirements)
 2. [Installation](#installation)
 3. [Developing](#developing)
+4. [Resources](#resources)
 
 ## Requirements
 
@@ -38,3 +39,8 @@ Run a production build to inline the dependent JS and CSS with `grunt deploy`.
 ## View on Github Pages
 
 [http://vigetlabs.github.io/interactive-wcag/](http://vigetlabs.github.io/interactive-wcag/)
+
+## Resources
+
+- [W3C Recommendation](http://www.w3.org/TR/WCAG20/)
+- [WebAIM's WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist)
