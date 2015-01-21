@@ -1,3 +1,10 @@
+// bootstrap a11y
+.btn:focus,
+div.active:focus,
+a:focus {
+  outline: dotted 1px #000;
+}
+
 // utilities
 .clearfix:after {
   clear: both;
