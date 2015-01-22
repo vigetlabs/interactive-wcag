@@ -2,7 +2,13 @@
 title: "Interactive WCAG 2.0"
 ---
 
-{{> perceivable }}
-{{> operable }}
-{{> understandable }}
-{{> robust }}
+<div
+  aria-live="polite"
+  id="wcag-content"
+  role="region">
+
+  {{> perceivable }}
+  {{> operable }}
+  {{> understandable }}
+  {{> robust }}
+</div>

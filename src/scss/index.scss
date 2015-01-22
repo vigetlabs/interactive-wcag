@@ -92,6 +92,12 @@ a {
 .filters-responsibility {
   float: right;
 
+  legend {
+    border: none;
+    font-size: 12px;
+    margin: 0 0 5px 15px;
+  }
+
   label {
     display: inline-block;
     font-size: 14px;
@@ -204,8 +210,11 @@ a {
   float: left;
 
   label {
-    display: inline-block;
-    margin: 0 15px 0 0;
+    border: none;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
   }
 }
 
