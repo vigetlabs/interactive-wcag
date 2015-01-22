@@ -5,6 +5,15 @@ a:focus {
   outline: dotted 1px #000;
 }
 
+a {
+  color: #2e6ca2;
+
+  &:focus,
+  &:hover {
+    color: #bf1722;
+  }
+}
+
 // utilities
 .clearfix:after {
   clear: both;
@@ -19,7 +28,7 @@ a:focus {
 // mixins
 @mixin disabled {
   background-color: #eee;
-  color: #444;
+  color: #555;
 }
 
 .container {
@@ -50,27 +59,28 @@ a:focus {
 }
 
 .label {
+  font-size: 85%;
   transition: all 200ms 50ms;
 }
 
 .label-fed {
-  background-color: #428bca;
+  background-color: #2e6ca2;
 }
 
 .label-design {
-  background-color: #5cb85c;
+  background-color: #387f38;
 }
 
 .label-ux {
-  background-color: #f0ad4e;
+  background-color: #8263b2;
 }
 
 .label-dev {
-  background-color: #d9534f;
+  background-color: #d33a35;
 }
 
 .label-content {
-  background-color: #777;
+  background-color: #686868;
 }
 
 // filters
@@ -84,6 +94,7 @@ a:focus {
 
   label {
     display: inline-block;
+    font-size: 14px;
     margin: 0 0 0 15px;
   }
 }
