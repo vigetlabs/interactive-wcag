@@ -44,3 +44,11 @@ Run a production build to inline the dependent JS and CSS with `grunt deploy`.
 
 - [W3C Recommendation](http://www.w3.org/TR/WCAG20/)
 - [WebAIM's WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist)
+
+***
+
+<a href="http://code.viget.com">
+  <img src="http://code.viget.com/github-banner.png" alt="Code At Viget">
+</a>
+
+Visit [code.viget.com](http://code.viget.com) to see more projects from [Viget.](https://viget.com)
