@@ -1,4 +1,4 @@
-// bootstrap a11y
+/* bootstrap a11y */
 .btn:focus,
 div.active:focus,
 a:focus {
@@ -7,6 +7,11 @@ a:focus {
 
 a {
   color: #2e6ca2;
+  text-decoration: underline;
+
+  &[role="tab"] {
+    text-decoration: none;
+  }
 
   &:focus,
   &:hover {
@@ -14,7 +19,7 @@ a {
   }
 }
 
-// utilities
+/* utilities */
 .clearfix:after {
   clear: both;
   content: '';
@@ -25,8 +30,8 @@ a {
   white-space: nowrap;
 }
 
-// mixins
-@mixin disabled {
+/* mixins */
+@define-mixin disabled {
   background-color: #eee;
   color: #555;
 }
@@ -83,12 +88,12 @@ a {
   background-color: #686868;
 }
 
-// filters
+/* filters */
 .filters {
   @extend .clearfix;
 }
 
-// filter by lab
+/* filter by role */
 .filters-responsibility {
   float: right;
 
@@ -110,7 +115,7 @@ a {
   .label-dev,
   .label-fed,
   .label-ux {
-    @include disabled;
+    @mixin disabled;
   }
 
   .design,
@@ -130,7 +135,7 @@ a {
   .label-dev,
   .label-fed,
   .label-ux {
-    @include disabled;
+    @mixin disabled;
   }
 
   .content,
@@ -150,7 +155,7 @@ a {
   .label-design,
   .label-fed,
   .label-ux {
-    @include disabled;
+    @mixin disabled;
   }
 
   .content,
@@ -170,7 +175,7 @@ a {
   .label-design,
   .label-dev,
   .label-ux {
-    @include disabled;
+    @mixin disabled;
   }
 
   .content,
@@ -190,7 +195,7 @@ a {
   .label-design,
   .label-dev,
   .label-fed {
-    @include disabled;
+    @mixin disabled;
   }
 
   .content,
@@ -205,7 +210,7 @@ a {
   }
 }
 
-// filter by level
+/* filter by WCAG level */
 .filters-level {
   float: left;
 

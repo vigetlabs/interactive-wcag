@@ -1,0 +1,77 @@
+<form class="filters">
+  <div class="filters-level">
+    <label for="filter-level">Filter by Level</label>
+    <select
+      aria-controls="wcag-content"
+      id="filter-level"
+      name="filter-level">
+
+      <option id="a" value="a">Level A</option>
+      <option id="aa" value="aa" selected="selected">Level AA</option>
+      <option id="aaa" value="aaa">Level AAA</option>
+    </select>
+  </div>
+
+  <fieldset class="filters-responsibility">
+    <legend>Filter by Responsibility</legend>
+
+    <label>
+      <input
+        aria-controls="wcag-content"
+        checked="checked"
+        name="responsibility"
+        type="radio"
+        value="">
+
+      <strong>All</strong>
+    </label>
+    <label>
+      <input
+        aria-controls="wcag-content"
+        name="responsibility"
+        type="radio"
+        value="content">
+
+      <span class="label label-content">Content</span>
+    </label>
+    <label>
+      <input
+        aria-controls="wcag-content"
+        name="responsibility"
+        type="radio"
+        value="design">
+
+      <span class="label label-design">Design</span>
+    </label>
+    <label>
+      <input
+        aria-controls="wcag-content"
+        name="responsibility"
+        type="radio"
+        value="dev">
+
+      <abbr title="General Development"
+            class="label label-dev">Dev</abbr>
+    </label>
+    <label>
+      <input
+        aria-controls="wcag-content"
+        name="responsibility"
+        type="radio"
+        value="fed">
+
+      <abbr title="Front-End Development"
+            class="label label-fed">FED</abbr>
+    </label>
+    <label>
+      <input
+        aria-controls="wcag-content"
+        name="responsibility"
+        type="radio"
+        value="ux">
+
+      <abbr title="User Experience"
+            class="label label-ux">UX</abbr>
+    </label>
+  </fieldset>
+</form>

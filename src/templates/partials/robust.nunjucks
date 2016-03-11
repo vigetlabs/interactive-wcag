@@ -1,0 +1,18 @@
+<section id="robust">
+  <h2>Principle 4: Robust</h2>
+
+  <p class="lead">Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</p>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat.html"><strong>Guideline 4.1 Compatible:</strong></a> Maximize compatibility with current and future user agents, including assistive technologies.
+    </div>
+
+    <table class="table">
+      <tbody class="a">
+        {% include "partials/robust-4-1-1.nunjucks" %}
+        {# include "./src/templates/partials/robust/4-1-2.nunjucks" #}
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ page.title }}</title>
+    <title>Interactive WCAG 2.0</title>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{assets}}/stylesheets/index.css?__inline=true">
+    <link rel="stylesheet" href="assets/styles/index.css">
 
-    <script src="{{assets}}/javascripts/vendor/js-class.js?__inline=true"></script>
+    <script>(function(H) {H.className = H.className.replace(/\bno-js\b/, 'js')})(document.documentElement);</script>
 
   </head>
   <body>
@@ -26,11 +26,9 @@
 
     </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="{{assets}}/javascripts/vendor/bootstrap-accessibility.js?__inline=true"></script>
-    <script src="{{assets}}/javascripts/vendor/urihash.js?__inline=true"></script>
-    <script src="{{assets}}/javascripts/index.js?__inline=true"></script>
+    <script src="assets/scripts/index.js"></script>
 
   </body>
 </html>
