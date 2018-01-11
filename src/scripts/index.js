@@ -5,8 +5,10 @@
   var responsibilities = document.querySelector('.filters-responsibility');
   var responsibilityFilters = responsibilities.getElementsByTagName('input');
   var levelFilter = document.querySelector('.filters-level select');
-  var roles = document.querySelectorAll('[data-role]');
-  var levels = document.querySelectorAll('[data-level]');
+  var wcag = document.getElementById('wcag-content');
+  var panels = wcag.querySelectorAll('.panel');
+  var roles = wcag.querySelectorAll('[data-role]');
+  var levels = wcag.querySelectorAll('[data-level]');
 
   // events
   var events = function() {
@@ -18,14 +20,46 @@
   };
 
   // functions
+  var unSetPanels = function() {
+    for (var i = 0, len = panels.length; i < len; i++) {
+      panels[i].classList.remove('-hide');
+    }
+  };
+
+  var setPanels = function() {
+    var visibleLevels;
+    var visibleGuidelines;
+
+    for (var i = 0, len = panels.length; i < len; i++) {
+      visibleLevels = panels[i].querySelectorAll('[data-level]:not(.-hide)');
+
+      if (visibleLevels.length === 0) {
+        panels[i].classList.add('-hide');
+      } else {
+        var visibleCount = 0;
+
+        for (var l = 0, len2 = visibleLevels.length; l < len2; l++) {
+          visibleGuidelines = visibleLevels[l].querySelectorAll('[data-guideline]:not(.-hide)');
+          visibleCount = visibleCount + visibleGuidelines.length;
+        }
+
+        if (visibleCount === 0) {
+          panels[i].classList.add('-hide');
+        }
+      }
+    }
+  };
+
   var unSetRoles = function() {
+    unSetPanels();
+
     for (var i = 0, len = roles.length; i < len; i++) {
       roles[i].classList.remove('-hide');
     }
   };
 
   var setRoles = function(role) {
-    var rolesToHide = document.querySelectorAll(
+    var rolesToHide = wcag.querySelectorAll(
       '[data-role]:not([data-role-' + role + '])'
     );
 
@@ -47,6 +81,7 @@
 
     if (checked !== '') {
       setRoles(checked);
+      setPanels();
     }
 
     document.body.setAttribute('data-role', checked);
@@ -54,18 +89,22 @@
   }
 
   var unSetLevels = function() {
+    unSetPanels();
+
     for (var i = 0, len = levels.length; i < len; i++) {
       levels[i].classList.remove('-hide');
     }
   };
 
   var setLevels = function(level) {
+    var levelsToHide = 0;
+
     if (level === 'a') {
-      var levelsToHide = document.querySelectorAll(
+      levelsToHide = wcag.querySelectorAll(
         '[data-level-aa],[data-level-aaa]'
       );
     } else if (level === 'aa') {
-      var levelsToHide = document.querySelectorAll(
+      levelsToHide = wcag.querySelectorAll(
         '[data-level-aaa]'
       );
     }
@@ -80,6 +119,7 @@
 
     unSetLevels();
     setLevels(level);
+    setPanels();
 
     URIHash.set('level', level);
   }

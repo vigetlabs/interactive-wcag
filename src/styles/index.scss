@@ -49,23 +49,36 @@ a {
 }
 
 .table {
+  tbody {
+    border: none;
+  }
+  
+  tr {
+    border-top: 1px solid #ddd;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
   th,
   td {
     padding: 20px !important;
   }
 
   th {
+    border-top: none !important;
     width: 20%;
   }
 
   td {
+    border-top: none !important;
     width: 80%;
   }
 }
 
 .label {
   font-size: 85%;
-  transition: all 200ms 50ms;
 }
 
 .label-fed {
@@ -169,6 +182,7 @@ a {
 }
 
 .container {
+  .panel,
   [data-role],
   [data-level] {
     &.-hide {
