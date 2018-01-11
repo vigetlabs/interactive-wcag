@@ -20,7 +20,7 @@ a {
 }
 
 /* utilities */
-.clearfix:after {
+.clearfix::after {
   clear: both;
   content: '';
   display: table;
@@ -110,103 +110,48 @@ a {
   }
 }
 
-[data-responsibility="content"] {
+[data-role="content"] {
   .label-design,
   .label-dev,
   .label-fed,
   .label-ux {
     @mixin disabled;
   }
-
-  .design,
-  .dev,
-  .fed,
-  .ux {
-    display: none;
-  }
-
-  .content {
-    display: block;
-  }
 }
 
-[data-responsibility="design"] {
+[data-role="design"] {
   .label-content,
   .label-dev,
   .label-fed,
   .label-ux {
     @mixin disabled;
   }
-
-  .content,
-  .dev,
-  .fed,
-  .ux {
-    display: none;
-  }
-
-  .design {
-    display: block;
-  }
 }
 
-[data-responsibility="dev"] {
+[data-role="dev"] {
   .label-content,
   .label-design,
   .label-fed,
   .label-ux {
     @mixin disabled;
   }
-
-  .content,
-  .design,
-  .fed,
-  .ux {
-    display: none;
-  }
-
-  .dev {
-    display: block;
-  }
 }
 
-[data-responsibility="fed"] {
+[data-role="fed"] {
   .label-content,
   .label-design,
   .label-dev,
   .label-ux {
     @mixin disabled;
   }
-
-  .content,
-  .design,
-  .dev,
-  .ux {
-    display: none;
-  }
-
-  .fed {
-    display: block;
-  }
 }
 
-[data-responsibility="ux"] {
+[data-role="ux"] {
   .label-content,
   .label-design,
   .label-dev,
   .label-fed {
     @mixin disabled;
-  }
-
-  .content,
-  .design,
-  .dev,
-  .fed {
-    display: none;
-  }
-
-  .ux {
-    display: block;
   }
 }
 
@@ -223,33 +168,11 @@ a {
   }
 }
 
-.js {
-  body {
-    .a,
-    .aa,
-    .aaa {
+.container {
+  [data-role],
+  [data-level] {
+    &.-hide {
       display: none;
-    }
-  }
-
-  [data-level="a"] {
-    .a {
-      display: table-header-group;
-    }
-  }
-
-  [data-level="aa"] {
-    .a,
-    .aa {
-      display: table-header-group;
-    }
-  }
-
-  [data-level="aaa"] {
-    .a,
-    .aa,
-    .aaa {
-      display: table-header-group;
     }
   }
 }

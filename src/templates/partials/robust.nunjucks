@@ -9,7 +9,7 @@
     </div>
 
     <table class="table">
-      <tbody class="a">
+      <tbody data-level data-level-a>
         {% include "partials/robust-4-1-1.nunjucks" %}
         {# include "./src/templates/partials/robust/4-1-2.nunjucks" #}
       </tbody>
