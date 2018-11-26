@@ -2,50 +2,11 @@
 
 A filterable and shareable version of the WCAG 2.0 spec.
 
-## Contents
+<h2 class="alert-heading">This project is no longer maintained</h4>
 
-1. [Requirements](#requirements)
-2. [Installation](#installation)
-3. [Developing](#developing)
-4. [Resources](#resources)
+Check out [our article about the WCAG 2.1 update](https://www.viget.com/articles/what-you-need-to-know-about-wcag-2-1/) and then bookmark the W3C's excellent [WCAG 2.1 Reference](https://www.w3.org/WAI/WCAG21/quickref/?currentsidebar=%23col_customize). It's up to date with the new spec and has similar filtering options to our Interactive WCAG.</p>
 
-## Requirements
-
-- [Node](http://nodejs.org/)
-- [Grunt](http://gruntjs.com/)
-
-## Installation
-
-### Install Grunt packages
-
-From the root of the site and run `npm install`.
-
-## Developing
-
-### Grunt
-
-- Run `grunt` to do a one-time compile of all the assets to the `dest` directory.
-- Run `grunt watch` while working on the project to compile assets as they're modified.
-
-### Local Server
-
-In the second tab run `grunt connect` and go to:<br>
-[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
-
-### Production
-
-Run a production build to inline the dependent JS and CSS with `grunt deploy`.
-
-## View on Github Pages
-
-[http://vigetlabs.github.io/interactive-wcag/](http://vigetlabs.github.io/interactive-wcag/)
-
-## Resources
-
-- [W3C Recommendation](http://www.w3.org/TR/WCAG20/)
-- [WebAIM's WCAG 2.0 Checklist](http://webaim.org/standards/wcag/checklist)
-
-***
+---
 
 <a href="http://code.viget.com">
   <img src="http://code.viget.com/github-banner.png" alt="Code At Viget">
